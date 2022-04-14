@@ -1,0 +1,54 @@
+.Maindiv{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    background-color: mediumpurple;
+}
+.D1{
+    width: 20px;
+    height: 50px;
+    left: 20px;
+    bottom:0px;
+    position:absolute;
+    background-color: white;
+}
+.D2{
+    width: 20px;
+    height: 80px;
+    left: 60px;
+    bottom:0px;
+    position:absolute;
+    background-color: white;
+}
+.D3{
+    width: 20px;
+    height: 90px;
+    left: 100px;
+    bottom:0px;
+    position:absolute;
+    background-color: white;
+}
+.D4{
+    width: 20px;
+    height: 120px;
+    left: 140px;
+    bottom:0px;
+    position:absolute;
+    background-color: white;
+}
+.D5{
+    width: 20px;
+    height: 130px;
+    left: 180px;
+    bottom:0px;
+    position:absolute;
+    background-color: white;
+}
+.D6{
+    width: 20px;
+    height: 170px;
+    left: 220px;
+    bottom:0px;
+    position:absolute;
+    background-color: white;
+}
