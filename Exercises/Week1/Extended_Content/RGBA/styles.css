@@ -1,0 +1,23 @@
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.container .content {
+    position: absolute;
+    top: 0;
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+}
+
+.content1 {
+    position: absolute;
+    width: 100%;
+    background-color: blueviolet;
+}

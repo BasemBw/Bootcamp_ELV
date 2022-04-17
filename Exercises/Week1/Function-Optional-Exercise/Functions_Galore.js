@@ -1,51 +1,60 @@
 people_info = [
-    {
-      name: "guido",
-      profession: "bungalow builder",
-      age: 17,
-      country: "canaland",
-      city: "sydurn",
-      catchphrase: "what a piece of wood!",
-    },
-    {
-      name: "petra",
-      profession: "jet plane mechanic",
-      age: 31,
-      country: "greenmark",
-      city: "bostork",
-      catchphrase: "that's my engine, bub",
-    },
-    {
-      name: "damian",
-      profession: "nursery assistant",
-      age: 72,
-      country: "zimbia",
-      city: "bekyo",
-      catchphrase: "with great responsibility comes great power",
-    }
-  ]
-//   for(object in people_info){
-//       console.log(object);
-//       for(const Obj in object)
-//           console.log("Info:",Object.values(object));
-//   }
-
-//   for(const obj in people_info)
-//       for(const obj1 in obj)
-//          console.log(obj[obj1][1].name);
-for(obj in people_info){
-    people_info[obj].name=people_info[obj].name.toUpperCase();
-    people_info[obj].profession=people_info[obj].profession.toUpperCase();
-    people_info[obj].country=people_info[obj].country.toUpperCase();
-    people_info[obj].city=people_info[obj].city.toUpperCase();
-    people_info[obj].catchphrase=people_info[obj].catchphrase.toUpperCase();
+  {
+    name: "guido",
+    profession: "bungalow builder",
+    age: 17,
+    country: "canaland",
+    city: "sydurn",
+    catchphrase: "what a piece of wood!",
+  },
+  {
+    name: "petra",
+    profession: "jet plane mechanic",
+    age: 31,
+    country: "greenmark",
+    city: "bostork",
+    catchphrase: "that's my engine, bub",
+  },
+  {
+    name: "damian",
+    profession: "nursery assistant",
+    age: 72,
+    country: "zimbia",
+    city: "bekyo",
+    catchphrase: "with great responsibility comes great power",
+  }
+]
+const capitalize = function(element){
+  return element.charAt(0).toUpperCase() + element.substring(1).toLowerCase();
+};
+const profession = function(element){
+  return capitalize(element);
+};
+const Change_catchphrase = function(element){
+  return '"'+capitalize(element)+'"';
+};
+const Changes_City_Country = function(element){
+  let city = element.city;
+  delete element.city;
+  return ' '+capitalize(element.country)+' , '+capitalize(city)+' ';
+};
+const getAge = function(age){
+  console.log(age);
+  if(age<=17)
+     return 'Underage'
+  else if(age>=55)
+     return '55+'
+  else 
+     return ''+age+' year old ';
+};
+const getSummary = function(person){
+  let summary = "";
+  summary += capitalize(person.name);
+  summary += ` is ${getAge(person.age)} `;
+  summary += profession(person.profession);
+  summary += Changes_City_Country(person);
+  summary += Change_catchphrase(person.catchphrase);
+  return summary;
 }
-console.log(people_info[obj].catchphrase);
-for(obj in people_info)
-   console.log(people_info[obj]);
-  let str = people_info[0].name.toUpperCase();
-  console.log(str);
 
-  let text = "Hello World!";
-  let result = text.toUpperCase();
-  console.log(result);
+console.log(getSummary(people_info[0]))
