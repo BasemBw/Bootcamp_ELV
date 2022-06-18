@@ -1,0 +1,46 @@
+.container{
+    width: 600px;
+    height: 600px;
+    background-color: blue;
+    display: grid;
+    background-color:coral;
+    grid-template-areas: 
+    ". t ."
+    "p p p"
+    "p p p"
+    "p p p"
+    "p p p"
+    "s b l";
+}
+.Timer{
+    grid-area: t;
+    text-align: center;
+    width: fit-content;
+}
+.playfild{
+    grid-area: p;
+    text-align: center;
+}
+.status{
+    grid-area: s;
+    text-align: center;
+    background-color: yellow;
+    height: fit-content;
+}
+.playbutton{
+    grid-area: b;
+    display: grid;
+    text-align: center;
+    background-color: red;
+    height: fit-content;
+}
+.level{
+    grid-area: l;
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    height: fit-content;
+}
+/* .Icon{
+    position: sticky;
+} */

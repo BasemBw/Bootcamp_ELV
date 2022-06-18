@@ -1,0 +1,15 @@
+ 
+@keyframes appear {
+  from{
+     width: 0;
+  }to{
+    width: 500px;
+  }
+}
+.catchline {
+  position: fixed;
+  margin-top: 110px;
+  font-family: Trebuchet MS;
+  color: #2c3e50;
+  font-weight: bold;
+}

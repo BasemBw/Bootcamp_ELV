@@ -1,0 +1,58 @@
+db.linkedon.find({}) 
+//---Ex1
+db.linkedon.count({
+    salary: {$gt: 25000}
+})
+//---Ex2
+ db.linkedon.find(    
+    {                       
+        
+    },                      
+    {                       
+        firstName:1,
+        salary:1,
+        _id:0
+    }                       
+).sort({salary:-1}).limit(3)    
+//---EX3
+db.linkedon.count({
+    $and:[
+        {"currentCompany.name": "Walmart"},
+        {salary: {$gt: 6999}}
+    ]
+})
+
+//---EX4
+
+ db.linkedon.find(
+    {
+        $or:[
+        {"currentCompany.industry": "Sales"},
+        {"currentCompany.industry": "Retail"}
+    ]
+    },
+    {
+        firstName:1,
+        lastName:1,
+        salary: 1,
+        "currentCompany.name":1,
+        _id:0
+    }
+).sort({salary:-1}).limit(1) 
+
+//---EX5
+
+db.linkedon.count({
+    $or:[
+        {"currentCompany.name":"Apple"},
+        { previousCompanies: { $elemMatch: { name:"Apple" } } }
+    ]
+})
+
+db.linkedon.findOneAndDelete({
+    "firstName": "Amelia"
+})
+
+
+
+
